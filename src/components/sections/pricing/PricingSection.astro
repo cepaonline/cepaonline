@@ -53,18 +53,17 @@ interface PricingSectionProps {
     <div
       class="w-full rounded-xl bg-gray-800 p-6 sm:w-1/2 sm:rounded-r-none sm:p-8 lg:w-1/3"
     >
-      <div class="mb-4">
-        <h3 class="text-2xl font-bold text-neutral-100 sm:text-3xl">
+      <div class="mb-2">
+        <h3 class="text-xl font-bold text-neutral-100">
           {pricing?.starterKit?.name}
         </h3>
-        <p class="text-indigo-300">{pricing?.starterKit?.description}</p>
+        <p class="text-indigo-300 text-sm">{pricing?.starterKit?.description}</p>
       </div>
-
-      <div class="mb-4">
-        <span class="text-4xl font-bold text-neutral-200"
+      <div class="mb-2">
+        <span class="text-2xl font-bold text-neutral-200"
           >{pricing?.starterKit?.price}</span
         >
-        <span class="text-lg font-bold text-neutral-300"
+        <span class="text-md font-bold text-neutral-300"
           >{pricing?.starterKit?.cents}</span
         >
         <span class="ms-3 text-sm text-indigo-200"
@@ -72,16 +71,37 @@ interface PricingSectionProps {
         >
       </div>
       <!-- Features list - automatically created by mapping over `features` array -->
-      <ul class="mb-6 space-y-2 text-neutral-300">
+      <ul class="mb-4 space-y-2 text-neutral-300 text-sm">
         {
           pricing?.starterKit?.features?.map((feature: string) => (
-            <li class="flex items-center gap-1?.5">
+            <li class="flex items-center gap-2">
               <Icon name="checkCircle" />
-
               <span>{feature}</span>
             </li>
           ))
         }
+      </ul>
+
+      <div class="mb-2">
+        <span class="text-2xl font-bold text-neutral-200">70.000</span>
+        <span class="text-md font-bold text-neutral-300">.00</span>
+        <span class="ms-3 text-sm text-indigo-200">CLP / Anual</span>
+      </div>
+
+      <ul class="mb-6 space-y-2 text-neutral-300 text-sm">
+        <li class="flex items-center gap-2">
+          <Icon name="checkCircle" />
+          <span>Incluye todo lo del plan mensual</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Icon name="checkCircle" />
+          <div class="flex flex-col">
+            <span>Certificación oficial</span>
+            <span class="text-xs">(Promoción por tiempo limitado)</span>
+          </div>
+          
+          
+        </li>
       </ul>
       <!-- CTA for purchasing the product -->
       <a
@@ -125,7 +145,7 @@ interface PricingSectionProps {
       <ul class="mb-6 space-y-2 text-primary-100">
         {
           pricing?.professionalToolbox?.features?.map((feature: string) => (
-            <li class="flex items-center gap-1?.5">
+            <li class="flex items-center gap-2">
               <Icon name="checkCircle" />
 
               <span>{feature}</span>
@@ -166,7 +186,7 @@ interface PricingSectionProps {
     <ul class="mb-6 space-y-2 text-neutral-300">
       {
         pricing?.certification?.features?.map((feature: string) => (
-          <li class="flex items-center gap-1?.5">
+          <li class="flex items-center gap-2">
             <Icon name="checkCircle" />
 
             <span>{feature}</span>
