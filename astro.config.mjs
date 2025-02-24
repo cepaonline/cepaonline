@@ -15,30 +15,30 @@ export default defineConfig({
   image: {
     domains: ["images.unsplash.com"]
   },
-  i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
-    fallback: {
-      en: "es"
-    },
-    routing: {
-      prefixDefaultLocale: false
-    }
-  },
+  // i18n: {
+  //   defaultLocale: "es",
+  //   locales: ["es", "en"],
+  //   fallback: {
+  //     en: "es"
+  //   },
+  //   routing: {
+  //     prefixDefaultLocale: false
+  //   }
+  // },
   // prefetch: true,
   integrations: [
     tailwind(),
-    sitemap({
-      i18n: {
-        defaultLocale: "es",
-        // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
-        locales: {
-          es: "es",
-          // The `defaultLocale` value must present in `locales` keys
-          en: "en"
-        }
-      }
-    }),
+    // sitemap({
+    //   i18n: {
+    //     defaultLocale: "es",
+    //     // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+    //     locales: {
+    //       es: "es",
+    //       // The `defaultLocale` value must present in `locales` keys
+    //       en: "en"
+    //     }
+    //   }
+    // }),
     db(),
     auth(),
     partytown({

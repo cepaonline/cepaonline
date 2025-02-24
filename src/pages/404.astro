@@ -5,14 +5,14 @@ import Btn404 from "@components/ui/buttons/Btn404.astro";
 import { SITE } from "@data/constants";
 
 // Define types for translations
-type TranslationKeys = 'es' | 'en';
+type TranslationKeys = "es" | "en";
 type Translations = {
   [key in TranslationKeys]: {
     pageTitle: string;
     subTitle: string;
     content: string;
     btnTitle: string;
-  }
+  };
 };
 
 // Define variables for page content
@@ -21,21 +21,25 @@ const translations: Translations = {
   es: {
     pageTitle: `Página no encontrada | ${SITE.title}`,
     subTitle: "Oops, no hemos encontrado lo que buscas",
-    content: "No dejes que este contratiempo te detenga. Vamos a ayudarte a volver.",
+    content:
+      "No dejes que este contratiempo te detenga. Vamos a ayudarte a volver.",
     btnTitle: "Volver",
   },
   en: {
     pageTitle: `Page Non Trouvée | ${SITE.title}`,
     subTitle: "Oops, ce n'est pas l'outil que vous recherchiez!",
-    content: "Ne laissez pas ce contretemps vous ralentir. Revenons à la construction de votre chef-d'œuvre.",
+    content:
+      "Ne laissez pas ce contretemps vous ralentir. Revenons à la construction de votre chef-d'œuvre.",
     btnTitle: "Retournez",
-  }
+  },
 };
 
 // Determine language from the URL
 const urlPath = Astro.url.pathname;
 const langCodeMatch = urlPath.match(/^\/(es|en)\//);
-const lang: TranslationKeys = langCodeMatch ? langCodeMatch[1] as TranslationKeys : defaultLang;
+const lang: TranslationKeys = langCodeMatch
+  ? (langCodeMatch[1] as TranslationKeys)
+  : defaultLang;
 
 const { pageTitle, subTitle, content, btnTitle } = translations[lang];
 ---
@@ -44,14 +48,27 @@ const { pageTitle, subTitle, content, btnTitle } = translations[lang];
   <section class="grid h-svh place-content-center">
     <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
       <div class="mx-auto max-w-screen-sm text-center">
-        <h1 class="text-dark mb-4 text-7xl font-extrabold text-cyan-500 dark:text-cyan-400 lg:text-9xl">
+        <h1
+          class="text-dark mb-4 text-7xl font-extrabold text-cyan-500 dark:text-cyan-400 lg:text-9xl"
+        >
           404
         </h1>
-        <p id="subtitle" class="mb-4 text-balance text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 md:text-4xl">
+        <p
+          id="subtitle"
+          class="mb-4 text-balance text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 md:text-4xl"
+        >
           {subTitle}
         </p>
-        <p id="content" class="mb-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400">
+        <p
+          id="content"
+          class="mb-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
+        >
           {content}
+        </p>
+        <p
+          id="countdown"
+          class="mb-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
+        >
         </p>
         <!-- Display a button that navigates user back to the previous page -->
         <Btn404 title={btnTitle} id="go-back" />
@@ -65,4 +82,24 @@ const { pageTitle, subTitle, content, btnTitle } = translations[lang];
   document.getElementById("go-back")?.addEventListener("click", () => {
     history.back();
   });
+
+  const countdownRedirect = (seconds) => {
+    let countdownDisplay = document.getElementById("countdown");
+    let remainingSeconds = seconds;
+
+    const updateCountdown = () => {
+      countdownDisplay.innerHTML = `Serás redireccionado en <span class='text-primary-500'>${remainingSeconds}</span> segundos...`;
+      remainingSeconds--;
+
+      if (remainingSeconds < 0) {
+        window.location.href = "/"; // Reemplaza "/" con la URL de tu página de inicio
+      } else {
+        setTimeout(updateCountdown, 1000);
+      }
+    };
+
+    updateCountdown();
+  };
+
+  countdownRedirect(3); // Inicia la cuenta regresiva desde 5 segundos
 </script>
