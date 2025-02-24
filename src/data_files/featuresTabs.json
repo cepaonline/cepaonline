@@ -3,8 +3,8 @@
     "heading": "TBA: herramienta psicopedagógica integral",
     "content": "es una batería informatizada, lo que permite automatizar procesos evaluativos y generar análisis cuantitativos y cualitativos para cada variable evaluada. Esta característica no solo agiliza el proceso de evaluación, sino que también proporciona resultados más detallados y precisos.",
     "svg": "question",
-    "src": "/img/profecional-tba.png",
-    "alt": "Profecional reallizando prueba TBA",
+    "src": "/img/profesional-tba.png",
+    "alt": "Profesional reallizando prueba TBA",
     "first": true
   },
   {
@@ -19,7 +19,7 @@
     "heading": "Compromiso científico",
     "content": "Los estudiantes podrán obtener un certificado de aprobación del curso otorgado por el Centro de Estudios Psicométricos y del Aprendizaje (CEPA).",
     "svg": "books",
-    "src": "/img/cetificacion-tba.png",
+    "src": "/img/niño-realizando-una-prueba-tba.png",
     "alt": "Estudiante completando certificación TBA"
   }
 ]

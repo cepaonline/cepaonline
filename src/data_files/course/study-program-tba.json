@@ -4,25 +4,25 @@
       "title": "Primer módulo", 
       "description": "Fundamentos teóricos y clínicos de las Dificultades Específicas de Aprendizaje (DEA).", 
       "imgUrl": "/img/module-1.jpg", 
-      "imgAlt": "Estudiante realizando modulo uno de tba"
+      "imgAlt": "Un estudiante realizando el módulo uno del TBA"
     },
     { 
       "title": "Segundo módulo", 
       "description": "Alcances metodológicos de la evaluación estandarizada para el diagnóstico de Dificultades Específicas de Aprendizaje (DEA).", 
       "imgUrl": "/img/module-2.jpg", 
-      "imgAlt": "Profecional realizando modulo dos de tba"
+      "imgAlt": "Un estudiante realizando el módulo dos del TBA"
     },
     { 
       "title": "Tercer módulo", 
       "description": " Propiedades psicométricas y análisis de reactivos del Test Básico de Aprendizaje.", 
       "imgUrl": "/img/module-3.jpg", 
-      "imgAlt": "Estudiante realizando modulo cuatro de tba"
+      "imgAlt": "Un estudiante realizando el módulo tres del TBA"
     },
     { 
       "title": "Cuarto módulo", 
       "description": "Informe de resultados que se ajusta al análisis e interpretación del perfil de aprendizaje y discrepancia de un individuo, obtenido a través del sistema TBA.", 
       "imgUrl": "/img/module-4.jpg", 
-      "imgAlt": "Profecional realizando modulo cuatro de tba"
+      "imgAlt": "Un estudiante realizando el módulo cuatro del TBA"
     }
   ]
   
