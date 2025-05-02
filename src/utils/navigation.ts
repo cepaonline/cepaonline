@@ -6,7 +6,8 @@ const navBarLinks = [
     type: "dropdown",
     childrens: [
       { name: "¿Qué es?", type: "basic", url: "/tba" },
-      { name: "Formación TBA", type: "basic", url: "/course" },
+      { name: "Entrenadores acreditados del TBA", type: "basic", url: "/trainers" },
+      // { name: "Formación TBA", type: "basic", url: "/course" },
     ]
   },
   { 

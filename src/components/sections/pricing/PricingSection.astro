@@ -54,13 +54,13 @@ interface PricingSectionProps {
       class="w-full rounded-xl bg-gray-800 p-6 sm:w-1/2 sm:rounded-r-none sm:p-8 lg:w-1/3"
     >
       <div class="mb-2">
-        <h3 class="text-xl font-bold text-neutral-100">
+        <h3 class="text-lg font-bold text-neutral-100">
           {pricing?.starterKit?.name}
         </h3>
-        <p class="text-indigo-300 text-sm">{pricing?.starterKit?.description}</p>
+        <p class="text-indigo-300 text-[13px]">{pricing?.starterKit?.description}</p>
       </div>
       <div class="mb-2">
-        <span class="text-2xl font-bold text-neutral-200"
+        <span class="text-xl font-bold text-neutral-200"
           >{pricing?.starterKit?.price}</span
         >
         <span class="text-md font-bold text-neutral-300"
@@ -81,9 +81,9 @@ interface PricingSectionProps {
           ))
         }
       </ul>
-
+      <span class="text-g font-bold text-neutral-200">Promoción especial</span>
       <div class="mb-2">
-        <span class="text-2xl font-bold text-neutral-200">70.000</span>
+        <span class="text-xl font-bold text-neutral-200">70.000</span>
         <span class="text-md font-bold text-neutral-300">.00</span>
         <span class="ms-3 text-sm text-indigo-200">CLP / Anual</span>
       </div>
@@ -91,7 +91,7 @@ interface PricingSectionProps {
       <ul class="mb-6 space-y-2 text-neutral-300 text-sm">
         <li class="flex items-center gap-2">
           <Icon name="checkCircle" />
-          <span>Incluye todo lo del plan mensual</span>
+          <span>Incluye todo lo del plan anual</span>
         </li>
         <li class="flex items-center gap-2">
           <Icon name="checkCircle" />

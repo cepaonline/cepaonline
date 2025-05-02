@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Cristian Flores Silva",
+        "description": "Psicopedagogo con amplia experiencia en docencia en educación superior. Diplomado en Problemas de Aprendizaje y en Diversidad e Inclusión.",
+        "img": {
+            "src": "/img/trainers/Cristian-Flores-Silva.png",
+            "alt": "Cristian Flores Silva"
+        }
+    },
+    {
+        "title": "Valentina Leiva Vera",
+        "description": "Psicopedagoga especializada en el área clínica infantojuvenil. Diplomada en Neurociencia Educativa y Dificultades del Aprendizaje. Con estudios en Trastornos del Neurodesarrollo y Neurodidáctica.",
+        "img": {
+            "src": "/img/trainers/Valentina-Leiva-Vera.png",
+            "alt": "Valentina Leiva Vera"
+        }
+    },
+    {
+        "title": "Javiera Domínguez Ampuero",
+        "description": "Magíster en Innovación Social para la Inclusión, Psicopedagoga y Licenciada en Psicopedagogía. Diplomada en Evaluación y Toma de Decisiones, en Gestión para la Inclusión Social, en Neurodidáctica y en Docencia Universitaria. ",
+        "img": {
+            "src": "/img/trainers/Javiera-Domínguez-Ampuero.png",
+            "alt": "Javiera Domínguez Ampuero"
+        }
+    },
+    {
+        "title": "Matías Chávez Serrano",
+        "description": "Psicopedagogo y educador diferencial con mención en accesibilidad de aprendizajes. Relator de temáticas inclusivas.",
+        "img": {
+            "src": "/img/trainers/Matías-Chávez-Serrano.png",
+            "alt": "Matías Chávez Serrano"
+        }
+    },
+    {
+        "title": "Claudia Vicencio Jáuregui",
+        "description": "Licenciada en Educación y Psicopedagoga, especializada en Dificultades Específicas de Aprendizaje.",
+        "img": {
+            "src": "/img/trainers/Claudia-Vicencio-Jáuregui.png",
+            "alt": "Claudia Vicencio Jáuregui"
+        }
+    },
+    {
+        "title": "Daniela Carrasco Donoso",
+        "description": "Psicopedagoga, Diplomada en Neurociencias Educativas, Convivencia Escolar y Magíster en Motricidad Infantil.",
+        "img": {
+            "src": "/img/trainers/Daniela-Carrasco-Donoso.png",
+            "alt": "Daniela Carrasco Donoso"
+        }
+    },
+    {
+        "title": "Roxana Barraza Schwencke",
+        "description": "Psicopedagoga, diplomada en Psicopedagogía Clínica y en Evaluación e Intervención de Necesidades Educativas Especiales. Candidata a Máster en Docencia Superior Universitaria.",
+        "img": {
+            "src": "/img/trainers/Roxana-Barraza-Schwencke.png",
+            "alt": "Roxana Barraza Schwencke"
+        }
+    }
+]

@@ -8,9 +8,9 @@
   "starterKit": {
     "name": "Especialista",
     "description": "La mejor opción para profesionales independientes",
-    "price": "13.000",
+    "price": "70.000",
     "cents": ".00",
-    "billingFrequency": "CLP / Mensual",
+    "billingFrequency": "CLP / Anual",
     "features": [
       "Asesoría técnica",
       "Soporte técnico",

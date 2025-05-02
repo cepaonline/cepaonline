@@ -1,0 +1,83 @@
+---
+// Import section components
+import MainLayout from "@/layouts/MainLayout.astro";
+import ProductTabBtn from "@/components/ui/tabs/TabBtn.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { SITE } from "@data/constants";
+import MainSection from "@/components/ui/blocks/MainSection.astro";
+import LeftSection from "@/components/ui/blocks/LeftSection.astro";
+import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import pricing from "@data/pricing.json";
+import RightSection from "@/components/ui/blocks/RightSection.astro";
+import Icon from "@/components/ui/icons/Icon.astro";
+import trainersTBA from "@data/trainers-tba.json";
+
+const pageTitle: string = `Entrenadores acreditados del TBA​​ | ${SITE.title}`;
+const title: string = `Entrenadores acreditados del TBA`;
+---
+
+<MainLayout title={pageTitle}>
+  <MainSection
+    title={title}
+    subTitle="La acreditación ha sido otorgada por el Centro de Estudios Psicométricos y del Aprendizaje, en colaboración con el autor del instrumento, Pablo San Martín Catalán, quien respalda y ratifica esta acreditación conforme a las condiciones de propiedad intelectual No: 2024-A-6913."
+    btnExists={false}
+    btnURL="https://app.cepaonline.cl/login"
+    imgOne="img/trainer-1.jpg"
+    imgOneAlt="Primer Entrenador acreditado TBA"
+    imgTwo="img/trainer-2.jpg"
+    imgTwoAlt="Segundo Entrenador acreditado TBA"
+  />
+
+  <section
+    class="mx-auto items-center gap-8 px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-14 xl:gap-16 2xl:max-w-full"
+  >
+    <!-- The container for title, subtitle, and optional CTA button -->
+    <div class="mt-4 md:mt-0">
+      <!-- The title of the section -->
+      <h2
+        id="fadeText"
+        class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200 text-center"
+      >
+        Acreditación Oficial del TBA: Un Respaldo de Excelencia
+      </h2>
+      <!-- The subtitle of the section -->
+      <p
+        class="mb-4 text-pretty font-light text-neutral-600 dark:text-neutral-400 sm:text-lg text-center"
+      >
+        A continuación, presentamos a los profesionales con reconocimiento del Centro de Estudios Psicométricos y del Aprendizaje, avalado por Pablo San Martín Catalán.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-y-8 md:grid-cols-1 md:grid-cols-3">
+      {
+        trainersTBA.map((test) => {
+          return (
+            <div class="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+              <div class="mx-auto h-32 w-32 overflow-hidden rounded-full mt-5">
+                <img
+                  class="h-full w-full object-cover"
+                  src={test.img.src}
+                  alt={test.img.alt}
+                />
+              </div>
+              <div class="p-[20px] text-center">
+                <span class="inline-flex items-center rounded-md bg-primary-50 px-2 py-1 text-xs font-medium text-primary-700 ring-1 ring-primary-600/10 ring-inset mb-3">
+                  Profesional Acreditado TBA
+                </span>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+                  {test.title}
+                </h5>
+
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center text-sm">
+                  {test.description}
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+</MainLayout>
