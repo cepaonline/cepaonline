@@ -9,10 +9,7 @@ import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/dashboard-image.png";
 import faqs from "@data/faqs.json";
-import features from "@data/features.json";
 import featuresTabs from "@data/featuresTabs.json";
 import pricing from "@data/pricing.json";
 import avatar from "@images/avatar.jpg";
@@ -41,7 +38,7 @@ const avatarSrcs: Array<string> = [
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
     reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
-    src={heroImage}
+    src="/img/dashboard-image.webp"
     alt="El Test Básico de Aprendizaje (TBA) es una herramienta psicopedagógica integral diseñada para evaluar un amplio espectro de variables cognitivas"
   />
 
