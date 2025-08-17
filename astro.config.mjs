@@ -1,12 +1,10 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
-import compressor from "astro-compressor";
-import starlight from "@astrojs/starlight";
 import node from "@astrojs/node";
 import db from "@astrojs/db";
 import auth from "auth-astro";
 import partytown from '@astrojs/partytown'
+import AstroPWA from '@vite-pwa/astro';
 
 // https://astro.build/config
 export default defineConfig({
@@ -45,7 +43,38 @@ export default defineConfig({
       config: {
         forward: ["dataLayer.push"],
       },
-  }),
+    }),
+    AstroPWA({
+      registerType: 'autoUpdate', // Opciones de registro del SW
+      manifest: {
+        name: 'Cepa Online',
+        short_name: 'Cepa Online',
+        description: 'Evaluaciones precisas con el TBA. La mejor tecnología para los estudios cognitivos',
+        theme_color: '#ffffff',
+        background_color: '#ffffff',
+        icons: [
+          {
+            src: '/img/logo/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/img/logo/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/img/logos/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp}'],
+      },
+    })
   ],
   output: "server",
   adapter: node({

@@ -14,5 +14,9 @@
       "@utils/*": ["src/utils/*"],
       "@api/*": ["src/pages/api/*"]
     },
+    "types": [
+      "vite-plugin-pwa/info.d.ts",
+      "vite-plugin-pwa/client.d.ts"
+    ]
   }
 }

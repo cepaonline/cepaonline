@@ -2,6 +2,25 @@ import type { APIRoute, ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 import icon from "@images/icon.png";
 import maskableIcon from "@images/icon-maskable.png";
+/**
+ * Este archivo (`manifest.json.ts`) genera dinámicamente el `manifest.json` de tu PWA
+ * usando una ruta de API de Astro.
+ *
+ * Mejora el rendimiento del manifiesto actual ofreciendo:
+ *
+ * ## 🚀 Ventajas Clave
+ * - **Iconos Optimizados:** Astro Assets redimensiona y optimiza tus iconos automáticamente.
+ * - **Mantenimiento Fácil:** Toda la lógica de iconos y manifiesto en un solo lugar.
+ * - **Adaptabilidad:** Añade o cambia tamaños de iconos sin esfuerzo manual.
+ * - **Control Total:** Gestiona los cambios del manifiesto con tu control de versiones.
+ *
+ * ## 🛠️ Pasos para Implementar
+ * 1. Renombra el archivo: Cambia `dinamic-manifest.json.ts` a `manifest.json.ts`
+ * (debe estar en `src/pages/`).
+ * 2. Enlaza el manifiesto: Añade esta línea al `<head>` de tu layout principal
+ * (ej. `src/layouts/Layout.astro`):
+ * `<link rel="manifest" href="/manifest.json" />`
+ */
 
 interface Favicon {
   purpose: 'any' | 'maskable' | 'monochrome';
@@ -20,7 +39,7 @@ const favicons: Favicon[] = [
     purpose: 'maskable',
     src: maskableIcon,
     sizes,
-   },
+  },
 ];
 
 export const GET: APIRoute = async () => {
